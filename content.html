@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resourses/css/import.css">
+    <title>Document</title>
+
+    <style>
+        html::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera*/
+            
+        }
+        html, body{
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */            
+        }
+        *{
+            font-size: 1.1rem;
+        }
+        .main_wrap{
+            width: 1000px;
+            border: 1px solid #b7b7bb;
+            border-radius: 4px;
+            padding: 5px 8px;
+            
+            margin-left: auto;
+            margin-right: auto;
+
+            margin-top: 18vh;
+        }
+        .td-bg{
+            background-color: #eeeeee;
+            font-weight: 600;
+            text-align: right;
+        }
+        .hr{
+            width: 100%;
+            background-color: #b7b7bb;
+            height: 1px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        table{
+            border: none;
+            width: 100%;
+        }
+        td{
+            padding: 5px;
+        }
+        input[type='text']{
+            height:30px;
+            border: 1px solid #b7b7bb;
+            border-radius: 4px;
+            background-color: none;
+            align-items: center;
+            transition: all .2s;
+        }
+        select{
+            width: 80px;
+            height:30px;
+            border: 1px solid #b7b7bb;
+            border-radius: 4px;
+            background-color: none;
+            align-items: center;
+            transition: all .2s;
+        }
+        img{
+            width: auto;
+            height: auto;
+            max-width: 150px;
+            max-height: 190px;
+            border: 1px solid #eeeeee;
+            display: flex;
+            align-items: center;
+        }
+
+        /* cont1 */
+        div.cont1 input[type='text']{
+            width: 200px;
+        }
+        div.cont1 tr:nth-child(1) td:nth-child(1){
+            width: 130px;
+        }
+        div.cont1 tr:nth-child(1) td.td-bg{
+            width: 140px;
+        }
+
+        /* cont2, cont3 */
+        div.cont2 tr:nth-child(1) td:nth-child(1),
+        div.cont2 tr:nth-child(1) td:nth-child(3),
+        div.cont2 tr:nth-child(1) td:nth-child(5),
+        div.cont3 tr:nth-child(1) td:nth-child(1),
+        div.cont3 tr:nth-child(1) td:nth-child(2),
+        div.cont3 tr:nth-child(4) td:nth-child(3),
+        div.cont3 tr:nth-child(4) td:nth-child(5){
+            width: 155px;
+        }
+        div.cont2 tr:nth-child(1) td:nth-child(2) input,
+        div.cont2 tr:nth-child(1) td:nth-child(4) input,
+        div.cont2 tr:nth-child(1) td:nth-child(6) input,
+        div.cont2 tr:nth-child(4) td:nth-child(2) input,
+        div.cont2 tr:nth-child(4) td:nth-child(4) input,
+        div.cont2 tr:nth-child(4) td:nth-child(6) input,
+        div.cont3 tr:nth-child(1) td select,
+        div.cont3 tr:nth-child(2) td select,
+        div.cont3 tr:nth-child(3) td select,
+        div.cont3 tr:nth-child(4) td select{
+            width: 120px;
+        }
+        div.cont2 tr:nth-child(2) td:nth-child(2) input,
+        div.cont2 tr:nth-child(2) td:nth-child(4) input{
+            width: 275px;
+        }
+        div.cont2 tr:nth-child(3) td:nth-child(2) input{
+            width: 775px;
+        }
+        div.cont3 tr:nth-child(5) td:nth-child(2) input{
+            width: 70px;
+        }
+        div.cont3 tr:nth-child(1) td:nth-child(2){
+            width: 172.33px;
+        }
+        div.cont3 tr:nth-child(5) td:nth-child(4) input{
+            width: 448px;
+        }        
+    </style>
+</head>
+
+<body>
+    <div class="main_wrap w100pro">
+        <form>
+            <div class="cont1 w100pro">
+                <table>
+                    <tr>
+                        <td rowspan="5" style="padding: 0px; padding-right: 8px;">
+                            <img src="https://via.placeholder.com/150x190"/>
+                        </td>
+                        <td class="td-bg">사원번호</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">성명</td>
+                        <td><input type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td-bg">영문성명</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">한자성명</td>
+                        <td><input type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td-bg">주민등록번호</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">성별</td>
+                        <td>
+                            <div class="w200px" style="display: flex; justify-content: center;">
+                                <label for="men" class="pa-r-30px"><input id="men" type="radio"/>남</label>
+                                <label for="women"><input id="women" type="radio"/>여</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-bg">생년월일</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">양력음력</td>
+                        <td>
+                            <div class="w200px" style="display: flex; justify-content: center;">
+                                <label for="lift" class="pa-r-10px"><input id="lift" type="radio"/>양력</label>
+                                <label for="lunar"><input id="lunar" type="radio"/>음력</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-bg">내외국인</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">국적</td>
+                        <td>
+                            <select class="ma-r-dot3">
+                                <option>한국</option>
+                                <option>러시아</option>
+                            </select>
+                            <input type="text"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="cont2 w100pro">
+                <table>
+                    <tr>
+                        <td class="td-bg">회사전화</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">자택전화</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">핸드폰</td>
+                        <td><input type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td-bg">회사이메일</td>
+                        <td colspan="2"><input type="text"/></td>
+                        <td class="td-bg">개인이메일</td>
+                        <td colspan="2"><input type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td class="td-bg">자택주소</td>
+                        <td colspan="5"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="td-bg">비상연락성명</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">비상연락전화</td>
+                        <td><input type="text"/></td>
+                        <td class="td-bg">비상연락관계</td>
+                        <td><input type="text"/></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="cont3 w100pro">
+                <table>
+                    <tr>
+                        <td class="td-bg">입사형태</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">근무형태</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">재직구분</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="td-bg">입사일자</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">승급일자</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">퇴직일자</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-bg">부서</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">직급</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">Discipline</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-bg">직책</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">직무</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                        <td class="td-bg">기술등급</td>
+                        <td>
+                            <select>
+                                <option></option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td-bg">근속년수</td>
+                        <td class="fw600"><input class="ma-r-dot3" type="text"/>&nbsp;년</td>
+                        <td class="td-bg">메모</td>
+                        <td colspan="3"><input type="text"/></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

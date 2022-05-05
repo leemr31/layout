@@ -1,0 +1,143 @@
+/*페이지네이션*/
+#pagination{
+	text-align: center;
+}
+
+
+/*수직중앙정렬*/
+.align-center{
+	display: flex;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+}
+
+
+
+/*높이설정*/
+.h-30px{
+	height: 30px;
+}
+.h-35px{
+	height: 35px;
+}
+.h-40px{
+	height: 40px;
+}
+.h-50px{
+	height: 50px;
+}
+.h-60px{
+	height: 60px;
+}
+.h-70px{
+	height: 70px;
+}
+.h-80px{
+	height: 80px;
+}
+.h-90px{
+	height: 90px;
+}
+.h-100px{
+	height: 100px;
+}
+
+
+
+
+/*라인높이 설정*/
+.line-h30px{
+	line-height: 30px;
+}
+.line-h35px{
+	line-height: 35px;
+}
+.line-h40px{
+	line-height: 40px;
+}
+.line-h50px{
+	line-height: 50px;
+}
+.line-h60px{
+	line-height: 60px;
+}
+.line-h70px{
+	line-height: 70px;
+}
+.line-h80px{
+	line-height: 80px;
+}
+.line-h90px{
+	line-height: 90px;
+}
+.line-h100px{
+	line-height: 100px;
+}
+
+
+
+
+/*버튼*/
+.btn-h50{
+	height: 50px;
+    line-height: 50px;
+	border: none;
+	text-align: center;
+    cursor: pointer;
+}
+.btn-h45{
+    height: 45px;
+    line-height: 45px;
+	border: none;
+	text-align: center;
+    cursor: pointer;
+}
+.btn-h40{
+    height: 40px;
+    line-height: 40px;
+	border: none;
+	text-align: center;
+    cursor: pointer;
+}
+.btn-h35{
+    height: 35px;
+    line-height: 35px;
+	border: none;
+	text-align: center;
+    cursor: pointer;
+}
+.btn-h30{
+    height: 30px;
+    line-height: 30px;
+	border: none;
+	text-align: center;
+    cursor: pointer;
+}
+.btn-h25{
+    height: 25px;
+    line-height: 25px;
+	border: none;
+	text-align: center;
+    cursor: pointer;
+}
+.btn-h20{
+    height: 20px;
+    line-height: 20px;
+	border: none;
+	text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+/*입력필드*/
+.input-h40{
+    height: 40px;
+    line-height: 40px;
+	border: none;
+}
+
+
